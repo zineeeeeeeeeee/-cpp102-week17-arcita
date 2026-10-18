@@ -1,7 +1,7 @@
 # Test Cases – Simulated Device Monitoring and Alert System
 
 **Tested by:** Stanley Austin V. Arcita  
-**Date:** __________________  
+ **Date:** 17 October 2026
 **Course:** CPP102 – Week 17
 
 ## Test Procedure
@@ -33,17 +33,9 @@ Run the Python program in VS Code and enter the inputs shown below. For tests th
 | TC14 | Choose `2`, enter `0`, then choose `3` | 0 °C accepted and classified NORMAL | Not yet recorded | Pending |
 | TC15 | Choose `2`, enter `100`, then choose `3` | 100 °C accepted and classified CRITICAL | Not yet recorded | Pending |
 | TC16 | Choose `2`, enter `36`, then choose `3` | `36 °C -> CRITICAL` | Not yet recorded | Pending |
-
 ## Bugs Found and Fixed
 
-No test results have been recorded yet. Document any issues found during testing, including the test case number, the incorrect behavior, the correction made, and the result after retesting.
-
-**Boundary checks:** Temperatures below 30 °C are NORMAL; temperatures from 30 °C through 35 °C are WARNING; temperatures above 35 °C are CRITICAL. The `check_level()` function must use `temp <= danger` for the WARNING boundary so that 35 °C is not classified as CRITICAL.
-
-## Testing Conclusion
-
-The test plan covers menu navigation, displaying readings, valid and invalid inputs, classification boundaries, summary calculations, and program exit. The final number of passed and failed tests will be added after execution.
-
-**Tests passed:** ____ / 16  
-**Tests failed:** ____ / 16  
-**Final status:** Pending testing
+No bugs were found during final testing. The most important tests were TC06 and TC07 because they checked the boundary values of 30°C and 35°C. Both temperatures must be classified as WARNING. This depends on the `check_level()` function using `<` for NORMAL and `<=` for WARNING. If `<` were used instead of `<=` in the second condition, 35°C would incorrectly be classified as CRITICAL. All test cases passed, and the program worked as expected.
+**Tests passed:** 16 / 16  
+**Tests failed:** 0 / 16  
+**Final status:** Passed
