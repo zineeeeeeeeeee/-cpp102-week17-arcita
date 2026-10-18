@@ -1,4 +1,4 @@
-gh auth login
+
 # CPP102 Week 17
 # Simulated Device Monitoring and Alert System
 
